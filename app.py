@@ -4,7 +4,7 @@ import pandas as pd
 import requests # to trigger API keys
 
 def fetch_poster(movie_id):
-     response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=b167c3901feb556acc1111344eca5ecf&language=en-US%22'.format(movie_id))
+     response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=[YOUR TMDB API KEY}&language=en-US%22'.format(movie_id))
      data = response.json()
      print(data)
      return "https://image.tmdb.org/t/p/original/" + data['poster_path']
